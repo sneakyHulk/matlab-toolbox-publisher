@@ -8,7 +8,7 @@ function releaseID = createAGithubRelease(owner, repo, version, name, descriptio
 %       description     - Description of release (char or string)
 %       token           - GitHub personal access token (char or string)
 %   Outputs:
-%       releaseID       - The releaseID edit the release further i.e.
+%       releaseID       - The releaseID to edit the release further i.e.
 %                           upload an asset
 
 isValidVersion = @(s) (ischar(s) || isstring(s)) && ~isempty(regexp(char(s), '^v\d+\.\d+\.\d+$', 'once'));
